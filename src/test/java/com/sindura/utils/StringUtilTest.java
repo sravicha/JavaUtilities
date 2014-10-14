@@ -6,6 +6,9 @@ import org.junit.Test;
 
 public class StringUtilTest {
 	
+/**
+ * Test for StringUtil.countChar(...)
+ */
 	@Test
 	public void testCountChar() {
 		
@@ -16,6 +19,18 @@ public class StringUtilTest {
 		count = s.countChar("To be or not to be", 't');
 		assertEquals(count,2); // positive test
 		
+	}
+	
+/**
+ * Test for StringUtil.changeChar(...)
+ */
+	@Test
+	public void testChangeChar() {
+		StringUtil s = new StringUtil();
+		String input = "AbcAxzHA";
+		String output = s.changeChar(input, 'A', 'B');
+		System.out.println(output);
+		assertEquals(output,"BbcBxzHB");
 	}
 
 }

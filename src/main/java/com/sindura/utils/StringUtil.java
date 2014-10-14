@@ -32,5 +32,25 @@ public class StringUtil {
 			return count;
 		}
 	}
+	
+/**
+ * Replaces all occurrences of a character with another in a String
+ * @param s Input String
+ * @param x Character to be replaced
+ * @param y Character to be replaced with
+ * @return Changed String
+ */
+	public static String changeChar(String s, char x, char y) {
+		if(s.length() >= 1) {
+			if (s.charAt(0) == x ) {
+				return y + changeChar(s.substring(1),x,y);	
+			}
+			else {
+				return s.charAt(0) + changeChar(s.substring(1),x,y);
+			}
+		}
+		return s;
+	}
+
 
 }
