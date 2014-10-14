@@ -34,7 +34,7 @@ public class StringUtil {
 	}
 	
 /**
- * Replaces all occurrences of a character with another in a String
+ * Replaces all occurrences of a character with another in a String (using recursion)
  * @param s Input String
  * @param x Character to be replaced
  * @param y Character to be replaced with
@@ -50,6 +50,18 @@ public class StringUtil {
 			}
 		}
 		return s;
+	}
+	
+/**
+ * Reverses a string using recursion
+ * @param input String
+ * @return input String reversed.
+ */
+	public String reverse(String s) {
+		char c = s.charAt(s.length()-1);
+        if(s.length() == 1) return new String() + c;   
+
+        return c + reverse(s.substring(0,s.length()-1));
 	}
 
 

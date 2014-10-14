@@ -29,8 +29,19 @@ public class StringUtilTest {
 		StringUtil s = new StringUtil();
 		String input = "AbcAxzHA";
 		String output = s.changeChar(input, 'A', 'B');
-		System.out.println(output);
 		assertEquals(output,"BbcBxzHB");
+	}
+	
+	
+/**
+ * Test for StringUtil.reverse(...)
+ */
+	@Test
+	public void testReverse() {
+		StringUtil s = new StringUtil();
+		String input = "abcdefgh";
+		String output = s.reverse(input);
+		assertEquals(output,"hgfedcba");
 	}
 
 }
